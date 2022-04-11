@@ -61,8 +61,9 @@
 			//////////////////////////////////////////////////////////////////
 			
 			// TODO 2 - Variable declarations 
-			
-
+			var location = 0;
+			var score = 0;
+			var speed = 1;
 			
 			/* 
 			This Function will be called 20 times/second. Each time it is called,
@@ -70,7 +71,8 @@
 			turn it around! 
 			*/
 			function update() {
-				
+				location = location + speed; // location += 10;
+				moveBoxTo(location);
 
 			};
 
@@ -80,8 +82,10 @@
 			the left side of the screen.
 			*/
 			function handleBoxClick() {
-				
-
+				location = 0;
+				score = score + 10;
+				changeBoxText(score);
+                speed = speed + 5;
 
 			};
 		})();
